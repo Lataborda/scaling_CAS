@@ -65,7 +65,7 @@ view_option = st.sidebar.selectbox("Selecciona la vista:",
 # VISTA 1: Inventario (Productos filtrados por cultivo)
 # ===================================================
 if view_option == "Inventario":
-    st.header("Inventario de entregables proyecto CAS")
+    st.header("Inventario de entregables proyecto CAS", divider='blue')
     
     # Ruta al CSV de inventario
     csv_path = "data/Inventary2.csv"
@@ -134,7 +134,7 @@ if view_option == "Inventario":
 # VISTA 2: Análisis de Red por Cultivos (con opción de visualización)
 # ===================================================
 elif view_option == "Análisis de red por cultivos":
-    st.header("Análisis de Red por Cultivos")
+    st.header("Análisis de Red por Cultivos",divider='blue')
     
     # Pestañas para alternar entre las redes
     TS = ui.tabs(options=['Banano/ASBAMA', 'Banano/Augura', 'Café', 'Arroz', 'Caña de azucar'], 
