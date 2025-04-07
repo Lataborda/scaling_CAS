@@ -1,3 +1,6 @@
+import warnings
+warnings.filterwarnings("ignore", message="The use_column_width parameter has been deprecated")
+
 import streamlit as st
 import pandas as pd
 import os
@@ -10,8 +13,7 @@ import streamlit.components.v1 as components
 import base64
 from PIL import Image
 
-import warnings
-warnings.filterwarnings("ignore", message="The use_column_width parameter has been deprecated")
+
 # ---------------------------
 # Configuración general
 # ---------------------------
