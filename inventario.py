@@ -134,7 +134,7 @@ if view_option == "Inventario":
 # VISTA 2: Análisis de Red por Cultivos (con opción de visualización)
 # ===================================================
 elif view_option == "Análisis de red por cultivos":
-    st.header("Análisis de Red por Cultivos",divider='blue')
+    st.header("Análisis de Red por Cultivos", divider='blue')
     
     # Pestañas para alternar entre las redes
     TS = ui.tabs(options=['Banano/ASBAMA', 'Banano/Augura', 'Café', 'Arroz', 'Caña de azucar'], 
