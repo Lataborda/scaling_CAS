@@ -11,11 +11,6 @@ import base64
 from PIL import Image
 
 # ---------------------------
-# Funciones para PDF (eliminadas en esta versión)
-# ---------------------------
-# (Se han retirado las funciones para visualizar y descargar PDFs)
-
-# ---------------------------
 # Configuración general
 # ---------------------------
 st.set_page_config(page_title="Dashboard Integral", layout="wide")
@@ -55,7 +50,7 @@ table, th, td {
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # Título principal
-st.title("Estrategia escalonamiento proyecto CAS (baseline)")
+st.title("Construcción: Estrategia escalonamiento")
 st.divider()
 
 # Selección de vista en el Sidebar
@@ -66,9 +61,9 @@ view_option = st.sidebar.selectbox("Selecciona la vista:",
 # VISTA 1: Inventario (Productos filtrados por cultivo)
 # ===================================================
 if view_option == "Inventario":
-    #st.header("Inventario de entregables proyecto CAS")
-    st.header('Inventario de entregables proyecto CAS',divider='blue')
-    # Ruta al CSV de productos
+    st.header("Inventario de entregables proyecto CAS")
+    
+    # Ruta al CSV de inventario
     csv_path = "data/Inventary2.csv"
     try:
         df = pd.read_csv(csv_path, delimiter=';')
@@ -135,7 +130,7 @@ if view_option == "Inventario":
 # VISTA 2: Análisis de Red por Cultivos (con opción de visualización)
 # ===================================================
 elif view_option == "Análisis de red por cultivos":
-    st.header("Análisis de Red por Cultivos",divider='blue')
+    st.header("Análisis de Red por Cultivos")
     
     # Pestañas para alternar entre las redes
     TS = ui.tabs(options=['Banano/ASBAMA', 'Banano/Augura', 'Café', 'Arroz', 'Caña de azucar'], 
@@ -143,7 +138,7 @@ elif view_option == "Análisis de red por cultivos":
     
     # Selector para elegir el tipo de visualización
     viz_type = st.selectbox("Elige el tipo de visualización", 
-                            ["Estática", "Interactiva"],
+                            ["Estática (Matplotlib)", "Interactiva (PyVis)"],
                             index=1)  # Por defecto la interactiva
     
     # Función para dibujar la red de forma estática (Matplotlib)
@@ -238,59 +233,50 @@ elif view_option == "Análisis de red por cultivos":
         except Exception as e:
             st.error(f"Error al leer el CSV de interpretación ({title}): " + str(e))
         else:
-            # Ocultar el índice de la tabla con hide_index()
-            styled_table = (
-                df_interpret
-                .style
-                .hide_index()  # <--- aquí ocultamos el índice
-                .set_properties(**{'text-align': 'left', 'padding': '6px'})
-                .set_table_styles(
-                    [{'selector': 'th',
-                      'props': [('text-align', 'center'),
-                                ('background-color', '#f2f2f2'),
-                                ('padding', '8px')]}]
-                )
-                .format(precision=2)
-            )
+            styled_table = df_interpret.style.set_properties(**{'text-align': 'left', 'padding': '6px'}).set_table_styles(
+                [{'selector': 'th', 'props': [('text-align', 'center'),
+                                                ('background-color', '#f2f2f2'),
+                                                ('padding', '8px')]}]
+            ).format(precision=2)
             st.markdown(styled_table.render(), unsafe_allow_html=True)
     
     # Mostrar según la pestaña seleccionada y el tipo de visualización
     if TS == "Banano/ASBAMA":
-        if viz_type == "Estática":
+        if viz_type == "Estática (Matplotlib)":
             draw_network_static("data/ASBAMA.csv", "Red del Sistema de Extensión del Banano (ASBAMA) - Estática")
         else:
             draw_network_interactive("data/ASBAMA.csv", "Red del Sistema de Extensión del Banano (ASBAMA) - Interactiva")
         show_interpretation("data/ASBAMA_interpretacion_analisis_red.csv", "ASBAMA")
     elif TS == "Banano/Augura":
-        if viz_type == "Estática":
+        if viz_type == "Estática (Matplotlib)":
             draw_network_static("data/AUGURA.csv", "Red del Sistema de Extensión del Banano (Augura) - Estática")
         else:
             draw_network_interactive("data/AUGURA.csv", "Red del Sistema de Extensión del Banano (Augura) - Interactiva")
         show_interpretation("data/interpretacion_augura.csv", "Augura")
     elif TS == "Café":
-        if viz_type == "Estática":
+        if viz_type == "Estática (Matplotlib)":
             draw_network_static("data/red_productiva_cafe.csv", "Red Productiva del Café - Estática")
         else:
             draw_network_interactive("data/red_productiva_cafe.csv", "Red Productiva del Café - Interactiva")
         show_interpretation("data/FNC_interpretacion.csv", "Café")
     elif TS == "Arroz":
-        if viz_type == "Estática":
+        if viz_type == "Estática (Matplotlib)":
             draw_network_static("data/redes_fedearroz.csv", "Red del Sistema de Extensión del Arroz - Estática")
         else:
             draw_network_interactive("data/redes_fedearroz.csv", "Red del Sistema de Extensión del Arroz - Interactiva")
         show_interpretation("data/Fedearroz_Centralidades.csv", "Arroz")
     elif TS == "Caña de azucar":
-        if viz_type == "Estática":
+        if viz_type == "Estática (Matplotlib)":
             draw_network_static("data/red cana.csv", "Red del Sistema de Extensión de Caña de azucar - Estática")
         else:
             draw_network_interactive("data/red cana.csv", "Red del Sistema de Extensión de Caña de azucar - Interactiva")
-        show_interpretation("data/Centralidades_Caña.csv", "Caña de azucar")
+        show_interpretation("data/Centralidades_Caña.csv", "Caña de azucar")
 
 # ===================================================
 # VISTA 3: Brief: Caracterización ME (Imágenes)
 # ===================================================
 elif view_option == "Brief: Caracterización ME":
-    st.header("Caracterización de modelos de extensión",divider='blue')
+    st.header("Caracterización de modelos de extensión", divider='blue')
     st.write("Brief: Caracterización ME")
     
     # Pestañas para elegir entre los modelos (imágenes)
@@ -301,40 +287,40 @@ elif view_option == "Brief: Caracterización ME":
         # Galería de imágenes para Caña de azucar: CanaAzucar1.jpg a CanaAzucar6.jpg
         image_names = [f"Caña de azucar {i}" for i in range(1, 7)]
         image_files = [f"data/CanaAzucar{i}.jpg" for i in range(1, 7)]
-        #st.write("## Galería de Caña de azucar")
+        st.write("## Galería de Caña de azucar")
         cols = st.columns(3)
         for idx, img in enumerate(image_files):
             with cols[idx % 3]:
-                st.image(img, caption=image_names[idx], use_column_width=True)
+                st.image(img, caption=image_names[idx], use_container_width=True)
     elif tabs == 'Café':
         # Galería de imágenes para Café: Cafe1.jpg a Cafe7.jpg
         image_names = [f"Café {i}" for i in range(1, 8)]
         image_files = [f"data/Cafe{i}.jpg" for i in range(1, 8)]
-        #st.write("## Galería de Café")
+        st.write("## Galería de Café")
         cols = st.columns(3)
         for idx, img in enumerate(image_files):
             with cols[idx % 3]:
-                st.image(img, caption=image_names[idx], use_column_width=True)
+                st.image(img, caption=image_names[idx], use_container_width=True)
     elif tabs == 'Banano':
         # Galería de imágenes para Banano: banano1.jpg a banano6.jpg
-        image_names = [f"banano {i}" for i in range(1, 7)]
+        image_names = [f"Banano {i}" for i in range(1, 7)]
         image_files = [f"data/banano{i}.jpg" for i in range(1, 7)]
-        #st.write("## Galería de Banano")
+        st.write("## Galería de Banano")
         cols = st.columns(3)
         for idx, img in enumerate(image_files):
             with cols[idx % 3]:
-                st.image(img, caption=image_names[idx], use_column_width=True)
+                st.image(img, caption=image_names[idx], use_container_width=True)
     elif tabs == 'Arroz':
         # Galería de imágenes para Arroz: Arroz1.jpg a Arroz5.jpg
         image_names = [f"Arroz {i}" for i in range(1, 6)]
         image_files = [f"data/Arroz{i}.jpg" for i in range(1, 6)]
-        #st.write("## Galería de Arroz")
+        st.write("## Galería de Arroz")
         cols = st.columns(3)
         for idx, img in enumerate(image_files):
             with cols[idx % 3]:
-                st.image(img, caption=image_names[idx], use_column_width=True)
+                st.image(img, caption=image_names[idx], use_container_width=True)
 
 st.divider()
 st.markdown('*Copyright (C) 2025. Alliance CIAT Bioversity*')
 st.caption('**Authors: Alejandro Taborda, (latabordaa@unal.edu.co), Jeimar Tapasco, Armando Muñoz, Luisa Perez, Deissy Martinez**')
-st.image('data/cas.png')
+st.image('data/cas.png', use_container_width=True)
