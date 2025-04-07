@@ -316,9 +316,9 @@ elif view_option == "Brief: Caracterización ME":
             with cols[idx % 3]:
                 st.image(img, caption=image_names[idx], use_column_width=True)
     elif tabs == 'Banano':
-        # Galería de imágenes para Banano: Banano1.jpg a Banano6.jpg
-        image_names = [f"Banano {i}" for i in range(1, 7)]
-        image_files = [f"data/Banano{i}.jpg" for i in range(1, 7)]
+        # Galería de imágenes para Banano: banano1.jpg a banano6.jpg
+        image_names = [f"banano {i}" for i in range(1, 7)]
+        image_files = [f"data/banano{i}.jpg" for i in range(1, 7)]
         #st.write("## Galería de Banano")
         cols = st.columns(3)
         for idx, img in enumerate(image_files):
