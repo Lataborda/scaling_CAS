@@ -1,0 +1,15 @@
+Origen;Destino;Tipo de Interacción;Periodicidad de la Interacción;;;
+Asistentes técnicos TECNICAS BALTIME;Productores de banano TECNICAS BALTIME;Visitas fincas;8;;;
+Asistentes técnicos AGROVID;Productores de banano AGROVID;Visitas fincas;8;;;
+Asistentes técnicos DAABON;Productores de banano DAABON;Visitas fincas;8;;;
+Asistentes técnicos BANASAN;Productores de banano BANASAN;Visitas fincas;8;;;
+Jefé técnica ASBAMA;Asistentes técnicos TECNICAS BALTIME;Soluciones CienTec;3;;;
+Jefé técnica ASBAMA;Asistentes técnicos AGROVID;Soluciones CienTec;3;;;
+Jefé técnica ASBAMA;Asistentes técnicos DAABON;Soluciones CienTec;3;;;
+Jefé técnica ASBAMA;Asistentes técnicos BANASAN;Soluciones CienTec;3;;;
+Comité técnico AGROVID;Presidencia ASBAMA;Prioridades gremiales;4;;;
+Comité técnico DAABON;Presidencia ASBAMA;Prioridades gremiales;4;;;
+Comité técnico BANASAN;Presidencia ASBAMA;Prioridades gremiales;4;;;
+Comité técnico TECNICAS BALTIME;Presidencia ASBAMA;Prioridades gremiales;4;;;
+Entidades gubernamentales (ej, ICA);Presidencia ASBAMA;Apoyo financiero;2;;;
+Presidencia ASBAMA;Jefé técnica ASBAMA;Lineamientos estratégicos;6;;;

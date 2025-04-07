@@ -1,0 +1,5 @@
+Métrica;¿Qué Mide?;Interpretación;Nodos Clave
+Centralidad de Grado;El número de conexiones directas de un nodo con otros nodos.;"El nodo 'Presidencia ASBAMA' tiene la mayor cantidad de conexiones directas; siendo central para la interacción en la red.";Presidencia ASBAMA
+Centralidad de Intermediación;La cantidad de veces que un nodo actúa como intermediario en los caminos más cortos.;"El nodo 'Jefé técnica ASBAMA' es un intermediario clave; facilitando el flujo de información en la red.";Jefé técnica ASBAMA
+Centralidad de Cercanía;La facilidad con la que un nodo puede alcanzar a todos los demás nodos en la red.;"El nodo 'Presidencia ASBAMA' puede alcanzar rápidamente a otros nodos; siendo eficiente en términos de cercanía.";Presidencia ASBAMA
+Centralidad de Eigenvector;La importancia de un nodo considerando la importancia de los nodos con los que está conectado.;"El nodo 'Productores de banano Augura' está conectado con nodos influyentes; lo que lo hace muy importante en la red.";Productores de banano Augura

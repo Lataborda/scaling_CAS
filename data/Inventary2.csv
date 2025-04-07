@@ -1,0 +1,145 @@
+Componente;Resultado;Producto N°;Descripción;Cultivos Asociados;Avance Identificado;Estado;Evidencia
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.1 - Fortalecimiento y modernización del sistema de extensión agrícola con énfasis en la adaptación y mitigación.
+";1;Siete plataformas de Big Data para 7 cultivos y 46.056 productores;Arroz, Maíz, Papa, Caña de azúcar, ganadería, Banano, Plátano;"Presencia de plataformas como E-Agrology y otras integradas (SIMA, SACFA); módulos operativos y dashboard reportado";"Implementación inicial en 2024; módulos actualizados en e-Agrology";Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.1 - Fortalecimiento y modernización del sistema de extensión agrícola con énfasis en la adaptación y mitigación.
+";2;Recomendaciones específicas de manejo para 381.000 ha / 46.056 productores;Arroz, Maíz, Papa, Caña de azúcar, Caña panelera, ganadería, Banano, Plátano;Cartillas con lineamientos de uso eficiente del agua y reducción de emisiones por cultivo;Primera versión entregada (banano, arroz, caña);Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.1 - Fortalecimiento y modernización del sistema de extensión agrícola con énfasis en la adaptación y mitigación.
+";3;Bot con recomendaciones para 15.256 productores (arroz, maíz, papa);Arroz, Maíz, Papa;No se identificó evidencia directa de desarrollo o uso del bot;No iniciado o no reportado;No
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.1 - Fortalecimiento y modernización del sistema de extensión agrícola con énfasis en la adaptación y mitigación.
+";4;1.215 técnicos capacitados en 7 cultivos;Arroz, Maíz, Papa, Caña panelera, Ganadería, Banano, Plátano;"Capacitación a 2.203 técnicos en 27 municipios; módulos digitales via WhatsApp";Avance superior a meta parcial;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.1 - Fortalecimiento y modernización del sistema de extensión agrícola con énfasis en la adaptación y mitigación.
+";5;1.215 técnicos capacitados (repetido como seguimiento);Arroz, Maíz, Papa, Caña de azúcar, Ganadería, Banano, Plátano;"Idéntico a producto 4; se trata de seguimiento de avance por trimestre";Avance superior a meta parcial;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";6;4 plataformas agroclimáticas mejoradas (caña, café, arroz, maíz);Caña de azúcar, Café, Arroz, Maíz;Instalación estaciones, integración IDEAM y gremios, Goodness Index en ACLIMATE;Implementación activa;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";7;5 nuevas plataformas agroclimáticas (papa, caña panelera, ganadería, banano, plátano);Papa, Caña panelera, Ganadería, Banano, Plátano;Plataformas mencionadas, avances iniciales de integración y talleres;Desarrollo parcial;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";8;Modelos de simulación calibrados para 8 cultivos;Arroz, Maíz, Papa, Caña de azúcar, Caña panelera, ganadería, Café, Banano, Plátano;"Protocolos y ensayos experimentales implementados; bases de datos estandarizadas";Implementación avanzada;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";9;Evaluación bioclimática en regiones ganaderas;Ganadería;Diagnóstico climático, caracterización y análisis territorial reportados;En ejecución;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";10;Modelos de alerta de plagas y enfermedades (arroz, café, caña panelera);Arroz, Café, Caña panelera;"Diseño y protocolos mencionados; no todos implementados";Desarrollo medio;Parcial
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";11;Servicio de previsión temporal de 1 a 10 días para arroz;Arroz;Diseño de arquitectura para plataforma y validación de requerimientos;Diseño arquitectónico casi completo;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";12;Servicio de previsión subestacional de 1 a 3 semanas para arroz;Arroz;Plataforma e-Agrology con módulo de captura de datos operativo;Implementación avanzada;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";13;Un millón de productores reciben recomendaciones agroclimáticas;Arroz, maíz, papa, caña panelera, banano, plátano, caña de azúcar, ganadería;Mockups y requerimientos de usuario para plataformas digitales;Diseño avanzado;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";14;961 personas capacitadas en servicios climáticos;Arroz, Maíz, Papa, Caña de azúcar, Banano, Plátano, Ganadería;Capacitación en múltiples cultivos, talleres reportados y planes de formación;Implementación activa;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";15;Funcionamiento de los 13 MTA existentes;Todos;Fortalecimiento y actividades con FAO, boletines agroclimáticos, participación;Cumplido;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";16;Creación y funcionamiento de al menos 2 nuevas MTA;Todos;Planificación y acciones en curso con metodología DCH;En ejecución;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";17;Modelo de alertas nutricionales (clima) para café;Café;Red de innovación y análisis de actores para alimentar el sistema;Diseño metodológico;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";18;Señales de cambio climático en el CRV (1994–2020);Todos;Análisis de línea base de indicadores para múltiples cultivos;Muy avanzado;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";19;Módulo de balance hídrico para arroz;Arroz;Planes de acción e integración con plataformas de datos;Implementación avanzada;Sí
+"Componente 1. Agricultura digital y servicios climáticos para la modernización del campo con énfasis en la adaptación y mitigación.
+";"Resultado 1.2. Servicios agroclimáticos existentes y/o fortalecidos
+";19;Módulo de fertilización para arroz;Arroz;Capacitación digital y distribución de contenidos a productores;Implementado;Sí
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.1. Banco de germoplasma fortalecido, desarrollo de nuevas variedades resilientes al clima y distribución masiva de sus semillas
+";20;Una plataforma de fenotipado desarrollada y al servicio de los cultivos;Arroz;Establecida en CIAT-Palmira, evaluando respuesta de genotipos de arroz a estrés térmico y CO2;En operación experimental;
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.1. Banco de germoplasma fortalecido, desarrollo de nuevas variedades resilientes al clima y distribución masiva de sus semillas
+";21;5 accesiones con tolerancia al calor y la sequía identificadas para cultivos de arroz, forraje, banano, maíz y caña de azúcar;Arroz;Ensayos con 51 genotipos de arroz, sincronización fenológica y evaluación bajo altas temperaturas;Evaluación avanzada (parcialmente cumplido);
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.1. Banco de germoplasma fortalecido, desarrollo de nuevas variedades resilientes al clima y distribución masiva de sus semillas
+";22;8 nuevos materiales al servicio de los productores para arroz, plátano, forraje, maíz y caña de azúcar;Arroz;Resultados preliminares en 51 genotipos de arroz, materiales avanzados evaluados;Parcialmente cumplido;
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.1. Banco de germoplasma fortalecido, desarrollo de nuevas variedades resilientes al clima y distribución masiva de sus semillas
+";23;Cuatro protocolos de propagación para cultivos de papa, banano, café, caña de azúcar y caña panelera;Papa, Banano, Café, Caña de azúcar, caña panelera;Protocolos adaptados por gremios, uso de túneles, propagación in vitro, biorreactores y validación en campo;Diseño técnico y validación inicial;
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.2. Uso más eficiente de los recursos hídricos, restauración de las propiedades del suelo y mejora de las prácticas de mitigación de GEI por parte de agricultores y gremios a través de la adopción de nuevas prácticas y tecnologías climáticamente inteligentes
+";24;Valores de consumo de agua medidos para manejo convencional;Papa, caña panelera, caña de azúcar, plátano, banano, ganadería;Parcelas implementadas y equipos de monitoreo instalados;En implementación activa;Mediciones en fincas priorizadas, balance de humedad y sensores instalados
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.2. Uso más eficiente de los recursos hídricos, restauración de las propiedades del suelo y mejora de las prácticas de mitigación de GEI por parte de agricultores y gremios a través de la adopción de nuevas prácticas y tecnologías climáticamente inteligentes
+";25;Huellas hídricas para manejo convencional;Papa, caña panelera, plátano, banano, ganadería;Colecta de datos y protocolos establecidos para monitoreo;Evaluación técnica en curso;Monitoreos de GEI en suelos y huella hídrica en caña y ganadería
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.2. Uso más eficiente de los recursos hídricos, restauración de las propiedades del suelo y mejora de las prácticas de mitigación de GEI por parte de agricultores y gremios a través de la adopción de nuevas prácticas y tecnologías climáticamente inteligentes
+";26;Factores de emisión TIER 2 para manejo convencional;Arroz, maíz, papa, caña de azúcar, caña panelera, banano, plátano, café, ganadería;Ciclos de muestreo ejecutados y datos enviados a laboratorio;En ejecución;Muestreos en parcelas bajo manejo convencional
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.2. Uso más eficiente de los recursos hídricos, restauración de las propiedades del suelo y mejora de las prácticas de mitigación de GEI por parte de agricultores y gremios a través de la adopción de nuevas prácticas y tecnologías climáticamente inteligentes
+";27;Huellas de carbono para manejo convencional;Arroz, papa, caña de azúcar, caña panelera, banano, plátano, ganadería;Curvas de concentración de gases completadas;Avance alto;Muestreos de GEI en caña y banano con dispositivo Picarro
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.2. Uso más eficiente de los recursos hídricos, restauración de las propiedades del suelo y mejora de las prácticas de mitigación de GEI por parte de agricultores y gremios a través de la adopción de nuevas prácticas y tecnologías climáticamente inteligentes
+";28;Modelos de planificación uso eficiente del agua;Arroz, caña de azúcar, caña panelera, banano;Diseño experimental, análisis de precipitación y sensores instalados;Implementado parcialmente;Planes de manejo en cuencas y parcelas experimentales
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.2. Uso más eficiente de los recursos hídricos, restauración de las propiedades del suelo y mejora de las prácticas de mitigación de GEI por parte de agricultores y gremios a través de la adopción de nuevas prácticas y tecnologías climáticamente inteligentes
+";29;Consumo de agua medido en tecnologías sostenibles;Papa, caña panelera, caña de azúcar, plátano, banano, café, ganadería;Parcelas delimitadas y monitoreo en ejecución;En operación técnica;Instalación de sensores, pluviómetros y protocolos implementados
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.2. Uso más eficiente de los recursos hídricos, restauración de las propiedades del suelo y mejora de las prácticas de mitigación de GEI por parte de agricultores y gremios a través de la adopción de nuevas prácticas y tecnologías climáticamente inteligentes
+";30;Evaluación de sistemas de tratamiento de aguas;No específico;En operación en 4 ubicaciones;En evaluación;Instalación y pruebas documentadas en informe
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.2. Uso más eficiente de los recursos hídricos, restauración de las propiedades del suelo y mejora de las prácticas de mitigación de GEI por parte de agricultores y gremios a través de la adopción de nuevas prácticas y tecnologías climáticamente inteligentes
+";31;Huellas hídricas para tecnologías sostenibles;Papa, caña panelera, plátano, banano, ganadería;Muestreos ejecutados y datos recopilados;En análisis;Datos de 16 ubicaciones con equipos instalados
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.2. Uso más eficiente de los recursos hídricos, restauración de las propiedades del suelo y mejora de las prácticas de mitigación de GEI por parte de agricultores y gremios a través de la adopción de nuevas prácticas y tecnologías climáticamente inteligentes
+";32;Factores de emisión TIER 2 para materiales genéticos y dietas; todos;Muestreos en parcelas de arroz, maíz, banano, café, ganadería;En evaluación de laboratorio;Protocolo de gases implementado, análisis en curso
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.2. Uso más eficiente de los recursos hídricos, restauración de las propiedades del suelo y mejora de las prácticas de mitigación de GEI por parte de agricultores y gremios a través de la adopción de nuevas prácticas y tecnologías climáticamente inteligentes
+";33;Huellas de carbono tecnologías sostenibles;Arroz, papa, caña de azúcar, caña panelera, banano, plátano, ganadería;Evaluación en curso, 14 huellas proyectadas;Avance medio;Cartillas e informes por sistema
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.2. Uso más eficiente de los recursos hídricos, restauración de las propiedades del suelo y mejora de las prácticas de mitigación de GEI por parte de agricultores y gremios a través de la adopción de nuevas prácticas y tecnologías climáticamente inteligentes
+";34;Sistemas ganaderos sostenibles en 3840 ha;Ganadería;Implementación por fases, monitoreo por gremios;En curso (1.920 ha cubiertas);Protocolo de cuantificación huella hídrica y monitoreo en 3 regiones
+"Componente 2. Mejoramiento genético, técnicas de manejo de cultivos y otras opciones tecnológicas y su escalada para aumentar la resiliencia climática y promover el desarrollo agrícola bajo en carbono.
+
+";"Resultado 2.2. Uso más eficiente de los recursos hídricos, restauración de las propiedades del suelo y mejora de las prácticas de mitigación de GEI por parte de agricultores y gremios a través de la adopción de nuevas prácticas y tecnologías climáticamente inteligentes
+";35;Modelos sostenibles en 5750 ha en 33 zonas;Arroz, maíz, papa, caña panelera, banano, plátano;Parcelas implementadas con estrategias sostenibles;En implementación gradual;Diseño experimental con sensores y monitoreo GEI
+Componente 3. Modelos de negocio innovadores e inclusivos a través de sistemas de innovación modernizados y un sector financiero más comprometido  ;"Resultado 3.1. Modelos de negocio mejorados que proporcionan a los agricultores ganancias razonables y mejores prácticas de mitigación de GEI
+";36;Ocho gremios fortalecidos en toma de decisiones;Multisectorial;Fortalecimiento institucional y mayor participación en espacios de gobernanza;Implementación en marcha;Participación gremial en Mesas Técnicas y redes institucionales
+Componente 3. Modelos de negocio innovadores e inclusivos a través de sistemas de innovación modernizados y un sector financiero más comprometido  ;"Resultado 3.1. Modelos de negocio mejorados que proporcionan a los agricultores ganancias razonables y mejores prácticas de mitigación de GEI
+";37;Ocho estrategias para resiliencia climática y reducción GEI;Multicultivo;Estrategias codiseñadas con gremios para mitigación y adaptación;Diseño colaborativo y validación;Planes y estrategias vinculadas a actores locales y mesas agroclimáticas
+Componente 3. Modelos de negocio innovadores e inclusivos a través de sistemas de innovación modernizados y un sector financiero más comprometido  ;"Resultado 3.1. Modelos de negocio mejorados que proporcionan a los agricultores ganancias razonables y mejores prácticas de mitigación de GEI
+";38;Ocho modelos de negocio enfocados en adaptación y reducción de GEI;Multicultivo;Diseño de modelos y validación en zonas piloto;Diseño y prueba inicial;Resultados preliminares de implementación de modelos de negocio resilientes
+Componente 3. Modelos de negocio innovadores e inclusivos a través de sistemas de innovación modernizados y un sector financiero más comprometido  ;"Resultado 3.1. Modelos de negocio mejorados que proporcionan a los agricultores ganancias razonables y mejores prácticas de mitigación de GEI
+";39;Cuatro instituciones financieras participan en MTA y usan información del proyecto;Multicultivo;Vinculación en mesas y uso parcial de información técnica para decisiones;En articulación institucional;Participación de entidades financieras en acciones del componente 3
+Componente 3. Modelos de negocio innovadores e inclusivos a través de sistemas de innovación modernizados y un sector financiero más comprometido  ;"Resultado 3.1. Modelos de negocio mejorados que proporcionan a los agricultores ganancias razonables y mejores prácticas de mitigación de GEI
+";40;Una nueva empresa creada basada en tecnologías digitales;No específico;"En proceso de identificación; referencia conceptual incluida";Etapa de diseño e ideación;Mencionado en componente 3 como acción prevista sin confirmación de ejecución
+Componente 3. Modelos de negocio innovadores e inclusivos a través de sistemas de innovación modernizados y un sector financiero más comprometido  ;"Resultado 3.2. Asistencia técnica modernizada y servicios de extensión agrícola con estrategias multiherramienta, diferenciadas y adaptadas a contextos ambientales, sociales, de género y productivos específicos a nivel nacional
+";41;54.000 productores fortalecidos en la implementación de tecnologías resilientes y bajas en carbono;Multicultivo;"129 talleres realizados y 2.484 personas capacitadas en maíz; muchas también para otros cultivos";Fortalecimiento en marcha;Informe parcial: 1.482 agricultores, 659 técnicos/profesionales capacitados
+Componente 3. Modelos de negocio innovadores e inclusivos a través de sistemas de innovación modernizados y un sector financiero más comprometido  ;"Resultado 3.2. Asistencia técnica modernizada y servicios de extensión agrícola con estrategias multiherramienta, diferenciadas y adaptadas a contextos ambientales, sociales, de género y productivos específicos a nivel nacional
+";42;30 materiales de sensibilización para apoyar formación con 6.000 copias;Multicultivo;Cartillas y documentos técnicos desarrollados, con énfasis en forrajes y prácticas agroecológicas;Diseño y producción en curso;Cartilla Sinchimaki y otros materiales en evaluación
+Componente 3. Modelos de negocio innovadores e inclusivos a través de sistemas de innovación modernizados y un sector financiero más comprometido  ;"Resultado 3.2. Asistencia técnica modernizada y servicios de extensión agrícola con estrategias multiherramienta, diferenciadas y adaptadas a contextos ambientales, sociales, de género y productivos específicos a nivel nacional
+";43;4.400 técnicos fortalecidos en capacidades de adaptación y mitigación;Multicultivo;Talleres realizados para técnicos, vinculados a estrategias climáticas y uso de tecnologías digitales;Capacitación en marcha;Capacitación de técnicos y reportes detallados en eventos de maíz
+Componente 3. Modelos de negocio innovadores e inclusivos a través de sistemas de innovación modernizados y un sector financiero más comprometido  ;"Resultado 3.2. Asistencia técnica modernizada y servicios de extensión agrícola con estrategias multiherramienta, diferenciadas y adaptadas a contextos ambientales, sociales, de género y productivos específicos a nivel nacional
+";44;Tres comunidades de práctica creadas y en funcionamiento;Multicultivo;Mencionadas comunidades de práctica para comunicaciones y saberes climáticos;Formación en marcha;Comunidades como la de Comunicación y saberes ancestrales activas
+Componente 3. Modelos de negocio innovadores e inclusivos a través de sistemas de innovación modernizados y un sector financiero más comprometido  ;"Resultado 3.2. Asistencia técnica modernizada y servicios de extensión agrícola con estrategias multiherramienta, diferenciadas y adaptadas a contextos ambientales, sociales, de género y productivos específicos a nivel nacional
+";45;60 entidades agropecuarias fortalecidas en adaptación y mitigación;Multicultivo;Trabajo articulado con gremios como Fedepapa, Cenicaña y Cenicafé para planes de fortalecimiento;Articulación y codiseño;Planes de acción con gremios desarrollados y en implementación

@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 700px;
+                 background-color: #FFFFFF;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "black"}, "id": "Asistentes t\u00e9cnicos TECNICAS BALTIME", "label": "Asistentes t\u00e9cnicos TECNICAS BALTIME", "shape": "dot", "title": "Asistentes t\u00e9cnicos TECNICAS BALTIME"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Productores de banano TECNICAS BALTIME", "label": "Productores de banano TECNICAS BALTIME", "shape": "dot", "title": "Productores de banano TECNICAS BALTIME"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Asistentes t\u00e9cnicos AGROVID", "label": "Asistentes t\u00e9cnicos AGROVID", "shape": "dot", "title": "Asistentes t\u00e9cnicos AGROVID"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Productores de banano AGROVID", "label": "Productores de banano AGROVID", "shape": "dot", "title": "Productores de banano AGROVID"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Asistentes t\u00e9cnicos DAABON", "label": "Asistentes t\u00e9cnicos DAABON", "shape": "dot", "title": "Asistentes t\u00e9cnicos DAABON"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Productores de banano DAABON", "label": "Productores de banano DAABON", "shape": "dot", "title": "Productores de banano DAABON"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Asistentes t\u00e9cnicos BANASAN", "label": "Asistentes t\u00e9cnicos BANASAN", "shape": "dot", "title": "Asistentes t\u00e9cnicos BANASAN"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Productores de banano BANASAN", "label": "Productores de banano BANASAN", "shape": "dot", "title": "Productores de banano BANASAN"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Jef\u00e9 t\u00e9cnica ASBAMA", "label": "Jef\u00e9 t\u00e9cnica ASBAMA", "shape": "dot", "title": "Jef\u00e9 t\u00e9cnica ASBAMA"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Comit\u00e9 t\u00e9cnico AGROVID", "label": "Comit\u00e9 t\u00e9cnico AGROVID", "shape": "dot", "title": "Comit\u00e9 t\u00e9cnico AGROVID"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Presidencia ASBAMA", "label": "Presidencia ASBAMA", "shape": "dot", "title": "Presidencia ASBAMA"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Comit\u00e9 t\u00e9cnico DAABON", "label": "Comit\u00e9 t\u00e9cnico DAABON", "shape": "dot", "title": "Comit\u00e9 t\u00e9cnico DAABON"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Comit\u00e9 t\u00e9cnico BANASAN", "label": "Comit\u00e9 t\u00e9cnico BANASAN", "shape": "dot", "title": "Comit\u00e9 t\u00e9cnico BANASAN"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Comit\u00e9 t\u00e9cnico TECNICAS BALTIME", "label": "Comit\u00e9 t\u00e9cnico TECNICAS BALTIME", "shape": "dot", "title": "Comit\u00e9 t\u00e9cnico TECNICAS BALTIME"}, {"color": "#97c2fc", "font": {"color": "black"}, "id": "Entidades gubernamentales (ej, ICA)", "label": "Entidades gubernamentales (ej, ICA)", "shape": "dot", "title": "Entidades gubernamentales (ej, ICA)"}]);
+                  edges = new vis.DataSet([{"from": "Asistentes t\u00e9cnicos TECNICAS BALTIME", "title": "Visitas fincas", "to": "Productores de banano TECNICAS BALTIME", "value": 8}, {"from": "Asistentes t\u00e9cnicos AGROVID", "title": "Visitas fincas", "to": "Productores de banano AGROVID", "value": 8}, {"from": "Asistentes t\u00e9cnicos DAABON", "title": "Visitas fincas", "to": "Productores de banano DAABON", "value": 8}, {"from": "Asistentes t\u00e9cnicos BANASAN", "title": "Visitas fincas", "to": "Productores de banano BANASAN", "value": 8}, {"from": "Jef\u00e9 t\u00e9cnica ASBAMA", "title": "Soluciones CienTec", "to": "Asistentes t\u00e9cnicos TECNICAS BALTIME", "value": 3}, {"from": "Jef\u00e9 t\u00e9cnica ASBAMA", "title": "Soluciones CienTec", "to": "Asistentes t\u00e9cnicos AGROVID", "value": 3}, {"from": "Jef\u00e9 t\u00e9cnica ASBAMA", "title": "Soluciones CienTec", "to": "Asistentes t\u00e9cnicos DAABON", "value": 3}, {"from": "Jef\u00e9 t\u00e9cnica ASBAMA", "title": "Soluciones CienTec", "to": "Asistentes t\u00e9cnicos BANASAN", "value": 3}, {"from": "Comit\u00e9 t\u00e9cnico AGROVID", "title": "Prioridades gremiales", "to": "Presidencia ASBAMA", "value": 4}, {"from": "Presidencia ASBAMA", "title": "Lineamientos estrat\u00e9gicos", "to": "Jef\u00e9 t\u00e9cnica ASBAMA", "value": 6}, {"from": "Comit\u00e9 t\u00e9cnico DAABON", "title": "Prioridades gremiales", "to": "Presidencia ASBAMA", "value": 4}, {"from": "Comit\u00e9 t\u00e9cnico BANASAN", "title": "Prioridades gremiales", "to": "Presidencia ASBAMA", "value": 4}, {"from": "Comit\u00e9 t\u00e9cnico TECNICAS BALTIME", "title": "Prioridades gremiales", "to": "Presidencia ASBAMA", "value": 4}, {"from": "Entidades gubernamentales (ej, ICA)", "title": "Apoyo financiero", "to": "Presidencia ASBAMA", "value": 2}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"physics": {"barnesHut": {"gravitationalConstant": -8000, "centralGravity": 0.3, "springLength": 95, "springConstant": 0.04, "damping": 0.09, "avoidOverlap": 0}, "minVelocity": 0.75}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

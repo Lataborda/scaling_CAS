@@ -1,0 +1,6 @@
+Métrica;¿Qué Mide?;Interpretación;Nodos Clave
+Centralidad de Grado;Cantidad de conexiones directas (entrantes y salientes) de un nodo.;Nodos con más conexiones directas son actores centrales en términos de interacción.;"SubGerencia Técnica de Fedearroz (0.656); Investigadores de Fedearroz (0.556)"
+Centralidad de Intermediación;Capacidad de un nodo para actuar como puente entre otros nodos.;Nodos con alta intermediación facilitan el flujo de información entre diferentes partes de la red.;"SubGerencia Técnica de Fedearroz (0.167); Investigadores de Fedearroz (0.125)"
+Centralidad de Cercanía;Proximidad de un nodo a todos los demás nodos en términos de distancia.;Nodos con alta cercanía tienen acceso eficiente a la red y pueden difundir información rápidamente.;"Asistentes Técnicos (0.474); Investigadores de Fedearroz (0.454)"
+Centralidad de Eigenvector;Influencia de un nodo basada en sus conexiones con otros nodos importantes.;Nodos con alta centralidad eigenvector son altamente influyentes en la red global.;"Productores de Arroz (1.000); SubGerencia Técnica de Fedearroz (0.000)"
+Número de Conexiones (Grado);Número total de enlaces directos de un nodo sin ponderar.;Nodos con más conexiones directas son muy activos en la red.;"SubGerencia Técnica de Fedearroz (5.000); Investigadores de Fedearroz (5.000)"

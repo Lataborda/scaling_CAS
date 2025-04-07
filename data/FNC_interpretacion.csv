@@ -1,0 +1,6 @@
+Métrica;¿Qué Mide?;Interpretación;Nodos Clave
+Centralidad de Grado;Cantidad de conexiones directas (entrantes y salientes) de un nodo.;Nodos con más conexiones directas son actores centrales en términos de interacción.;"Gerencia Técnica FNC (875); Extensionistas FNC (625)"
+Centralidad de Intermediación;Capacidad de un nodo para actuar como puente entre otros nodos.;Nodos con alta intermediación facilitan el flujo de información entre diferentes partes de la red.;"Gerencia Técnica FNC (0.25); Extensionistas FNC (0.107)"
+Centralidad de Cercanía;Proximidad de un nodo a todos los demás nodos.;Nodos con alta cercanía tienen acceso eficiente a la red y pueden difundir información rápidamente.;"Productores de Café (0.666); Gerencia Técnica FNC (0.5)"
+Centralidad de Eigenvector;Influencia de un nodo basado en sus conexiones con otros nodos importantes.;Nodos con alta eigenvector centrality son altamente influyentes en la red global.;Productores de Café (1.0)
+Número de Conexiones;Número total de enlaces directos sin ponderar.;Nodos con más conexiones directas son muy activos en la red.;"Gerencia Técnica FNC (7); Extensionistas FNC (5)"

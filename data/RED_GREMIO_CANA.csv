@@ -1,0 +1,21 @@
+Origen;Destino;Tipo de Interacción;Periodicidad de la interacción
+Cenicaña;Investigadores Cenicaña;Investigación y desarrollo;10
+Cenicaña;Ingenios;Transferencia de tecnología;9
+Cenicaña;Asistentes técnicos;Capacitación técnica;5
+Cenicaña;Productores de caña;Validación de tecnologías;7
+Asocaña;Ingenios;Definición de políticas sectoriales;3
+Asocaña;Gobierno;Representación y articulación;9
+Asocaña;Productores de caña;Gestión de recursos;9
+Tecnicaña;Asistentes técnicos;Difusión de conocimientos;9
+Tecnicaña;Productores de caña;Capacitación técnica;7
+Procaña;Productores de caña;Representación de productores;10
+Procaña;Ingenios;Negociación con ingenios;3
+Ingenios;Productores de caña;Compra de caña;8
+Ingenios;Asistentes técnicos;Soporte técnico;7
+Ingenios;Personal de transferencia de tecnología;Asesoría en innovación;9
+Productores de caña;Ingenios;Suministro de materia prima;10
+Productores de caña;Asistentes técnicos;Retroalimentación & validación;7
+Asistentes técnicos;Productores de caña;Capacitación a productores;5
+Asistentes técnicos;Ingenios;Soporte técnico en producción;8
+Asistentes técnicos;Gobierno;Gestión de políticas agrícolas;3
+Personal de transferencia de tecnología;Productores de caña;Demostración en campo;5
