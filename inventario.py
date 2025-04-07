@@ -233,12 +233,9 @@ elif view_option == "Análisis de red por cultivos":
         except Exception as e:
             st.error(f"Error al leer el CSV de interpretación ({title}): " + str(e))
         else:
-            styled_table = df_interpret.style.hide_index().set_properties(**{'text-align': 'left', 'padding': '6px'}).set_table_styles(
-                [{'selector': 'th', 'props': [('text-align', 'center'),
-                                                ('background-color', '#f2f2f2'),
-                                                ('padding', '8px')]}]
-            ).format(precision=2)
-            st.markdown(styled_table.render(), unsafe_allow_html=True)
+            # Convertir el DataFrame a HTML sin índice
+            html_table = df_interpret.to_html(index=False)
+            st.markdown(html_table, unsafe_allow_html=True)
     
     # Mostrar según la pestaña seleccionada y el tipo de visualización
     if TS == "Banano/ASBAMA":
@@ -323,4 +320,4 @@ elif view_option == "Brief: Caracterización ME":
 st.divider()
 st.markdown('*Copyright (C) 2025. Alliance CIAT Bioversity*')
 st.caption('**Authors: Alejandro Taborda, (latabordaa@unal.edu.co), Jeimar Tapasco, Armando Muñoz, Luisa Perez, Deissy Martinez**')
-st.image('data/cas.png', use_container_width=True)
+st.image('data/cas.png')
