@@ -233,7 +233,7 @@ elif view_option == "Análisis de red por cultivos":
         except Exception as e:
             st.error(f"Error al leer el CSV de interpretación ({title}): " + str(e))
         else:
-            styled_table = df_interpret.style.set_properties(**{'text-align': 'left', 'padding': '6px'}).set_table_styles(
+            styled_table = df_interpret.style.hide_index().set_properties(**{'text-align': 'left', 'padding': '6px'}).set_table_styles(
                 [{'selector': 'th', 'props': [('text-align', 'center'),
                                                 ('background-color', '#f2f2f2'),
                                                 ('padding', '8px')]}]
