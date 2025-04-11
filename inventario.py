@@ -12,6 +12,11 @@ from pyvis.network import Network
 import streamlit.components.v1 as components
 import base64
 from PIL import Image
+import numpy as np
+if not hasattr(np, 'Inf'):
+    np.Inf = np.inf
+
+# Resto de tu código...
 
 
 # ---------------------------
