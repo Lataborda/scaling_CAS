@@ -273,53 +273,6 @@ elif view_option == "Análisis de red por cultivos":
             draw_network_interactive("data/red cana.csv", "Red del Sistema de Extensión de Caña de azucar - Interactiva")
         show_interpretation("data/Centralidades_Caña.csv", "Caña de azucar")
 
-# ===================================================
-# VISTA 3: Brief: Caracterización ME (Imágenes)
-# ===================================================
-#elif view_option == "Brief: Caracterización ME":
-    st.header("Caracterización de modelos de extensión", divider='blue')
-    st.write("Brief: Caracterización ME")
-    
-    # Pestañas para elegir entre los modelos (imágenes)
-    tabs = ui.tabs(options=['Caña de azucar', 'Café', 'Banano', 'Arroz'], 
-                   default_value='Caña de azucar', key="brief_tabs")
-    
-    if tabs == 'Caña de azucar':
-        # Galería de imágenes para Caña de azucar: CanaAzucar1.jpg a CanaAzucar6.jpg
-        image_names = [f"Caña de azucar {i}" for i in range(1, 7)]
-        image_files = [f"data/CanaAzucar{i}.jpg" for i in range(1, 7)]
-        st.write("## Galería de Caña de azucar")
-        cols = st.columns(3)
-        for idx, img in enumerate(image_files):
-            with cols[idx % 3]:
-                st.image(img, caption=image_names[idx], use_container_width=True)
-    elif tabs == 'Café':
-        # Galería de imágenes para Café: Cafe1.jpg a Cafe7.jpg
-        image_names = [f"Café {i}" for i in range(1, 8)]
-        image_files = [f"data/Cafe{i}.jpg" for i in range(1, 8)]
-        st.write("## Galería de Café")
-        cols = st.columns(3)
-        for idx, img in enumerate(image_files):
-            with cols[idx % 3]:
-                st.image(img, caption=image_names[idx], use_container_width=True)
-    elif tabs == 'Banano':
-        # Galería de imágenes para Banano: banano1.jpg a banano6.jpg
-        image_names = [f"Banano {i}" for i in range(1, 7)]
-        image_files = [f"data/banano{i}.jpg" for i in range(1, 7)]
-        st.write("## Galería de Banano")
-        cols = st.columns(3)
-        for idx, img in enumerate(image_files):
-            with cols[idx % 3]:
-                st.image(img, caption=image_names[idx], use_container_width=True)
-    elif tabs == 'Arroz':
-        # Galería de imágenes para Arroz: Arroz1.jpg a Arroz5.jpg
-        image_names = [f"Arroz {i}" for i in range(1, 6)]
-        image_files = [f"data/Arroz{i}.jpg" for i in range(1, 6)]
-        st.write("## Galería de Arroz")
-        cols = st.columns(3)
-        for idx, img in enumerate(image_files):
-            with cols[idx % 3]:
-                st.image(img, caption=image_names[idx], use_container_width=True)
 
 st.divider()
 st.markdown('*Copyright (C) 2025. Alliance CIAT Bioversity*')
