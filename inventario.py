@@ -313,7 +313,7 @@ elif view_option == "Brief: Caracterización ME":
                 st.session_state[index_key] += 1
 
     # Imagen
-    st.image(current_images[current_index], use_container_width=True, caption=f"{tabs} ({current_index + 1} / {len(current_images)})")
+    st.image(current_images[current_index], width=700, caption=f"{tabs} ({current_index + 1} / {len(current_images)})")
     
     
 
