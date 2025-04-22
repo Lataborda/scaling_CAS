@@ -64,7 +64,7 @@ st.divider()
 
 # Selección de vista en el Sidebar
 view_option = st.sidebar.selectbox("Selecciona la vista:", 
-                                   ["Inventario", "Análisis de red por cultivos"])
+                                   ["Inventario", "Análisis de red por cultivos","Brief: Caracterización ME"])
 
 # ===================================================
 # VISTA 1: Inventario (Productos filtrados por cultivo)
@@ -278,6 +278,55 @@ elif view_option == "Análisis de red por cultivos":
             draw_network_interactive("data/red cana.csv", "Red del Sistema de Extensión de Caña de azucar - Interactiva")
         show_interpretation("data/Centralidades_Caña.csv", "Caña de azucar")
 
+# ===================================================
+# VISTA 3: Brief: caracterización 
+# ===================================================
+elif view_option == "Brief: Caracterización ME":
+    st.header("Caracterización de modelos de extensión", divider='blue')
+
+    tabs = ui.tabs(options=['Caña de azucar', 'Café', 'Banano', 'Arroz'], 
+                   default_value='Caña de azucar', key="brief_tabs")
+
+    images_dict = {
+        'Caña de azucar': [f"data/CanaAzucar{i}.jpg" for i in range(1, 7)],
+        'Café': [f"data/Cafe{i}.jpg" for i in range(1, 8)],
+        'Banano': [f"data/banano{i}.jpg" for i in range(1, 7)],
+        'Arroz': [f"data/Arroz{i}.jpg" for i in range(1, 6)],
+    }
+
+    if f"img_index_{tabs}" not in st.session_state:
+        st.session_state[f"img_index_{tabs}"] = 0
+
+    current_images = images_dict[tabs]
+    index_key = f"img_index_{tabs}"
+    current_index = st.session_state[index_key]
+
+    # ---- Botones ARRIBA de la imagen ----
+    col_top1, col_top2, col_top3 = st.columns([1, 6, 1])
+    with col_top1:
+        if st.button("⬅ Página anterior", key=f"top_prev_{tabs}"):
+            if st.session_state[index_key] > 0:
+                st.session_state[index_key] -= 1
+    with col_top3:
+        if st.button("Página siguiente ➡", key=f"top_next_{tabs}"):
+            if st.session_state[index_key] < len(current_images) - 1:
+                st.session_state[index_key] += 1
+
+    # Imagen
+    st.image(current_images[current_index], use_container_width=True, caption=f"{tabs} ({current_index + 1} / {len(current_images)})")
+    
+    
+
+    # ---- Botones ABAJO de la imagen ----
+    col_bot1, col_bot2, col_bot3 = st.columns([1, 6, 1])
+    with col_bot1:
+        if st.button("⬅ Página anterior", key=f"bot_prev_{tabs}"):
+            if st.session_state[index_key] > 0:
+                st.session_state[index_key] -= 1
+    with col_bot3:
+        if st.button("Página siguiente ➡", key=f"bot_next_{tabs}"):
+            if st.session_state[index_key] < len(current_images) - 1:
+                st.session_state[index_key] += 1
 
 st.divider()
 st.markdown('*Copyright (C) 2025. Alliance CIAT Bioversity*')
