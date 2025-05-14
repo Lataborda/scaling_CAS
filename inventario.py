@@ -22,7 +22,7 @@ if not hasattr(np, 'Inf'):
 # ---------------------------
 # Configuración general
 # ---------------------------
-st.set_page_config(page_title="Dashboard Integral", layout="wide")
+st.set_page_config(page_title="Scaling CAS", layout="wide")
 
 # CSS personalizado para forzar un tema claro en contenedores, tarjetas y tablas
 custom_css = """
@@ -64,7 +64,7 @@ st.divider()
 
 # Selección de vista en el Sidebar
 view_option = st.sidebar.selectbox("Selecciona la vista:", 
-                                   ["Inventario", "Análisis de red por cultivos","Brief: Caracterización ME"])
+                                   ["Capacidad de Modelos de extensión", "Inventario", "Análisis de red por cultivos","Brief: Caracterización ME"])
 
 # ===================================================
 # VISTA 1: Inventario (Productos filtrados por cultivo)
@@ -316,7 +316,6 @@ elif view_option == "Brief: Caracterización ME":
     st.image(current_images[current_index], width=700, caption=f"{tabs} ({current_index + 1} / {len(current_images)})")
     
     
-
     # ---- Botones ABAJO de la imagen ----
     col_bot1, col_bot2, col_bot3 = st.columns([1, 6, 1])
     with col_bot1:
@@ -327,8 +326,239 @@ elif view_option == "Brief: Caracterización ME":
         if st.button("Página siguiente ➡", key=f"bot_next_{tabs}"):
             if st.session_state[index_key] < len(current_images) - 1:
                 st.session_state[index_key] += 1
+# ===================================================
+# VISTA 4: Capacidad modelos de extensión 
+# ===================================================
+
+elif view_option == "Capacidad de Modelos de extensión":
+    st.header("Capacidad de Modelos de extensión")
+
+    # ==== CSS para tarjetas y paneles ====
+    st.markdown("""
+    <style>
+    /* Estilos generales de tarjetas */
+    div.info-card {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        border: 1px solid #dddddd !important;
+        border-radius: 8px !important;
+        padding: 16px !important;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.1) !important;
+        margin-bottom: 16px !important;
+    }
+    div.info-card h2, div.info-card h1 { margin: 0 !important; }
+    div.info-card p { margin: 4px 0 8px !important; font-size:14px !important; color:#555 !important; }
+    div.info-card small { display:block !important; margin-top:4px !important; font-size:12px !important; color:#777 !important; }
+    div.info-card .progress-bar-container { background:#eee !important; border-radius:4px !important; overflow:hidden !important; height:20px !important; margin-top:6px !important; }
+    div.info-card .progress-bar { height:100% !important; background:#4CAF50 !important; text-align:right !important; padding-right:4px !important; color:#fff !important; font-size:12px !important; line-height:20px !important; }
+
+    /* Estilos panel café (FNC) */
+    .panel-left, .panel-right { padding:20px; border-radius:12px; margin-bottom:24px; }
+    .panel-left { background:#FFF3E0; } .panel-left h3 { color:#BF360C; font-size:24px; margin-bottom:16px; }
+    .panel-right { background:#33691E; } .panel-right h3 { color:#F1F8E9; font-size:24px; margin-bottom:16px; }
+    .card { display:flex; align-items:center; margin-bottom:12px; }
+    .card .icon { font-size:32px; margin-right:12px; }
+    .panel-left .icon { color:#BF360C; } .panel-right .icon { color:#F1F8E9; }
+    .panel-left p, .panel-right p { margin:0; line-height:1.3; }
+    .panel-right p { color:#F1F8E9; }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # ==== Pestañas para alternar vistas ====
+    import streamlit_shadcn_ui as ui
+    TF = ui.tabs(
+        options=['Café','Banano/ASBAMA', 'Banano/Augura', 'Arroz', 'Caña de azucar'],
+        default_value='Banano/ASBAMA',
+        key='network_tabs'
+    )
+
+    if TF == "Banano/ASBAMA":
+        # ==== CSS específico para Banano ====
+        st.markdown("""
+        <style>
+        /* Tarjetas Banano: fondo crema suave */
+        .banana-card {
+          background-color: #FFFDE7 !important;
+          border: 1px solid #FFEE58 !important;
+        }
+        .banana-card h2 {
+          font-size: 28px !important;
+          margin-bottom: 4px !important;
+        }
+        .banana-card p {
+          font-size: 13px !important;
+          color: #666 !important;
+        }
+        .banana-card small {
+          color: #999 !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
+        st.subheader("🍌 Potenciales beneficiarios y áreas sembradas – ASBAMA")
+        col1, col2, col3 = st.columns(3)
+
+        with col1:
+            st.markdown("""
+            <div class="info-card banana-card">
+              <h2>🍌 142</h2>
+              <p>Pot. beneficiarios:<br><strong>4 Comercializadoras</strong></p>
+              <small>• 4 especialistas (16)<br>• 2–3 ingenieros c/u (48)<br>• 1 admin/100 ha (78)</small>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with col2:
+            st.markdown("""
+            <div class="info-card banana-card">
+              <h2>👩‍🌾 1 733</h2>
+              <p>Pot. beneficiarios:<br><strong>Pequeños Prod.</strong></p>
+              <small>• 1–5 ha p/ productor (prom.)<br>• Cooperativas locales</small>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with col3:
+            st.markdown("""
+            <div class="info-card banana-card">
+              <h2>📋 1 875</h2>
+              <p>Total pot. beneficiarios</p>
+              <small>Suma: comercializadoras + pequeños productores</small>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
+        a1, a2 = st.columns(2)
+        with a1:
+            st.markdown("""
+            <div class="info-card">
+              <h2>7 800 ha</h2>
+              <p>Área sembrada<br>Grandes Comercializadoras</p>
+              <small>7 800 ha gestionadas por 4 empresas</small>
+            </div>
+            """, unsafe_allow_html=True)
+        with a2:
+            st.markdown("""
+            <div class="info-card">
+              <h2>5 200 ha</h2>
+              <p>Área sembrada<br>Pequeños Productores</p>
+              <small>5 200 ha gestionadas por productores pequeños</small>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
+        mc = st.columns(1)[0]
+        with mc:
+            st.markdown("""
+            <div class="info-card">
+              <p style="font-size:14px; color:#555; margin-bottom:4px;">Meta anual de productores</p>
+              <h1 style="font-size:48px; line-height:1; margin-bottom:4px;">500 <span style="font-size:16px; vertical-align:super;">Productores</span></h1>
+              <small>Base 100% = 500 productores</small>
+
+              <div style="margin-top:12px;">
+                <label style="font-size:14px; color:#333;">• Grandes Comercializadoras (142/500)</label>
+                <div class="progress-bar-container">
+                  <div class="progress-bar" style="width:26.8%;">26.8%</div>
+                </div>
+              </div>
+              <div style="margin-top:12px;">
+                <label style="font-size:14px; color:#333;">• Pequeños Productores (358/500)</label>
+                <div class="progress-bar-container">
+                  <div class="progress-bar" style="width:73.2%;">73.2%</div>
+                </div>
+              </div>
+            </div>
+            """, unsafe_allow_html=True)
+        # … justo después de tus 3 tarjetas banana-card …
+
+         # — luego de tus 3 banana-cards …
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        # ==== Tarjeta Meta hectáreas año 1 (estilo igual a meta de productores) ====
+        meta_area = 3459
+        total_area = 7800 + 5200  # = 13_000
+        pct = meta_area / total_area * 100  # ≈26.6
+
+        mcol = st.columns(1)[0]
+        with mcol:
+            st.markdown(f"""
+            <div class="info-card banana-card">
+              <p style="font-size:14px; color:#555555; margin-bottom:4px;">
+                Meta: Total hectáreas a cubrir en el proyecto
+              </p>
+              <h1 style="font-size:48px; line-height:1; margin-bottom:4px;">
+                {meta_area:,} <span style="font-size:16px; vertical-align:super;">ha</span>
+              </h1>
+              <small>Base 100% area total de ASBAMA= {total_area:,} ha</small>
+
+              <div style="margin-top:12px;">
+                <div class="progress-bar-container">
+                  <div class="progress-bar" style="width:{pct:.1f}%;">{pct:.1f}%</div>
+                </div>
+              </div>
+            </div>
+            """, unsafe_allow_html=True)
+            
+
+    elif TF == "Banano/Augura":
+        st.info("🔨 En construcción para Banano/Augura")
+
+    elif TF == "Café":
+        # --- Panel FNC (Café) ---
+        colA, colB = st.columns(2)
+        with colA:
+            st.markdown("""
+            <div class="panel-left">
+              <h3>Meta anual de beneficiarios: Campañas planeadas por FNC en CSICAP</h3>
+              <div class="card"><div class="icon">🎯</div><p><strong>80 000 productores</strong> (20 000/año)</p></div>
+              <div class="card"><div class="icon">👥</div><p><strong>1 000 extensionistas</strong> / campaña</p></div>
+              <div class="card"><div class="icon">📈</div><p><strong>20 productores</strong> / extensionista/año</p></div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with colB:
+            st.markdown("""
+            <div class="panel-right">
+              <h3>Índice: Capacidad-cobertura total de extensionistas de FNC</h3>
+              <div class="card"><div class="icon">🤝</div><p><strong>1 450 extensionistas</strong></p></div>
+              <div class="card"><div class="icon">☕</div><p><strong>550 000 productores</strong> en territorio nacional</p></div>
+              <div class="card"><div class="icon">⏰</div><p><strong>Dedicados full-time</strong> a extensión</p></div>
+              <div class="card"><div class="icon">👨‍🌾</div><p><strong>379 productores</strong> por extensionista</p></div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        # --- Tarjeta adicional de área total a cubrir ---
+        st.markdown("""
+        <div style="border-radius: 12px; border: 2px solid #ccc; padding: 20px; background-color: #f5f5f5; width: 100%; max-width: 700px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); font-family: Arial, sans-serif; margin: 30px auto;">
+            <h3 style="margin-top: 0; color: #4E342E;">Meta: Área total a cubrir en proyecto CSICAP</h3>
+
+
+          <p><strong>Año 1:</strong><br>
+          📍 <span style="font-size: 1.5em; font-weight: bold; color: #2E7D32;">31.200 ha estimadas</span><br>
+          <span style="font-size: 0.9em; color: #555;">(Meta de <strong>20.000 productores</strong> en el modelo de extensión × 1,56 ha promedio por productor)<br>
+          <em>Nota: 1,56 ha es el promedio del área por productor en Colombia</em></span></p>
+
+          <p><strong>Proyección a 4 años:</strong><br>
+          📈 <span style="font-size: 1.3em; font-weight: bold; color: #33691E;">124.800 ha estimadas</span>  
+          <br><span style="font-size: 0.9em; color: #555;">(Valor estimado al término del proyecto)</span></p>
+
+
+          <p><strong>Meta oficial del proyecto:</strong><br>
+          🎯 <span style="font-size: 1.2em; font-weight: bold; color: #D84315;">254.400 hectáreas</span></p>
+
+          <p><strong>Avance estimado:</strong> 49,1%</p>
+          <div style="background-color: #ddd; border-radius: 20px; overflow: hidden; height: 20px; margin-top: 5px;">
+            <div style="width: 49.1%; background-color: #E53935; height: 100%; text-align: center; color: white; font-weight: bold;">
+              49.1%
+            </div>
+          </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+
+    else:
+        st.info(f"🔨 En construcción para {TF}")
+    
 
 st.divider()
 st.markdown('*Copyright (C) 2025. Alliance CIAT Bioversity*')
 st.caption('**Authors: Alejandro Taborda, (latabordaa@unal.edu.co), Jeimar Tapasco, Armando Muñoz, Luisa Perez, Deissy Martinez**')
-st.image('data/cas.png')
+st.image('data/cas.png', width=250)
