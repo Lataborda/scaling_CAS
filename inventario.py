@@ -22,7 +22,7 @@ if not hasattr(np, 'Inf'):
 # ---------------------------
 # Configuración general
 # ---------------------------
-st.set_page_config(page_title="Scaling CAS", layout="wide")
+st.set_page_config(page_title="Scaling CAS")
 
 # CSS personalizado para forzar un tema claro en contenedores, tarjetas y tablas
 custom_css = """
