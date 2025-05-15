@@ -336,13 +336,22 @@ elif view_option == "Capacidad de Modelos de extensión":
     # ==== CSS para tarjetas y paneles ====
     st.markdown("""
     <style>
-    /* …tus estilos actuales de .info-card… */
+      /* …tus reglas .info-card y .progress-bar… */
     
-    /* FORZAR NÚMEROS EN NEGRO */
-    div.info-card h1,
-    div.info-card h2 {
-        color: #000000 !important;
-    }
+      /* NÚMEROS SIEMPRE EN NEGRO */
+      div.info-card h1,
+      div.info-card h2 {
+          color: #000000 !important;
+      }
+      /* CAFÉ: texto en tarjetas de panel-izquierdo y panel-derecho */
+      .panel-left .card p,
+      .panel-left .card p strong {
+          color: #000000 !important;
+      }
+      .panel-right .card p,
+      .panel-right .card p strong {
+          color: #FFFFFF !important;
+      }
     </style>
     """, unsafe_allow_html=True)
     st.markdown("""
