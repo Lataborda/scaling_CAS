@@ -547,32 +547,75 @@ elif view_option == "Capacidad de Modelos de extensión":
 
         # --- Tarjeta adicional de área total a cubrir ---
         st.markdown("""
-        <div style="border-radius: 12px; border: 2px solid #ccc; padding: 20px; background-color: #f5f5f5; width: 100%; max-width: 700px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); font-family: Arial, sans-serif; margin: 30px auto;">
-            <h3 style="margin-top: 0; color: #4E342E;">Meta: Área total a cubrir en proyecto CSICAP</h3>
-
-
+        <style>
+        /* Forzar texto en negro sobre la tarjeta de proyecto CSICAP */
+        div.project-meta-card h3,
+        div.project-meta-card p,
+        div.project-meta-card p strong,
+        div.project-meta-card em {
+            color: #000000 !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="info-card project-meta-card"
+             style="border-radius:12px;
+                    border:2px solid #ccc;
+                    padding:20px;
+                    background-color:#f5f5f5;
+                    width:100%;max-width:700px;
+                    box-shadow:2px 2px 10px rgba(0,0,0,0.1);
+                    font-family:Arial,sans-serif;
+                    margin:30px auto;">
+        
+          <h3 style="margin-top:0;">Meta: Área total a cubrir en proyecto CSICAP</h3>
+        
           <p><strong>Año 1:</strong><br>
-          📍 <span style="font-size: 1.5em; font-weight: bold; color: #2E7D32;">31.200 ha estimadas</span><br>
-          <span style="font-size: 0.9em; color: #555;">(Meta de <strong>20.000 productores</strong> en el modelo de extensión × 1,56 ha promedio por productor)<br>
-          <em>Nota: 1,56 ha es el promedio del área por productor en Colombia</em></span></p>
-
+          📍 <span style="font-size:1.5em;
+                         font-weight:bold;
+                         color:#2E7D32;">
+            31 200 ha estimadas
+          </span><br>
+          <span style="font-size:0.9em; color:#555;">
+            (Meta de <strong>20 000 productores</strong> × 1,56 ha promedio)<br>
+            <em>Nota: 1,56 ha es el promedio del área por productor</em>
+          </span></p>
+        
           <p><strong>Proyección a 4 años:</strong><br>
-          📈 <span style="font-size: 1.3em; font-weight: bold; color: #33691E;">124.800 ha estimadas</span>  
-          <br><span style="font-size: 0.9em; color: #555;">(Valor estimado al término del proyecto)</span></p>
-
-
+          📈 <span style="font-size:1.3em;
+                         font-weight:bold;
+                         color:#33691E;">
+            124 800 ha estimadas
+          </span><br>
+          <span style="font-size:0.9em; color:#555;">
+            (Valor estimado al término del proyecto)
+          </span></p>
+        
           <p><strong>Meta oficial del proyecto:</strong><br>
-          🎯 <span style="font-size: 1.2em; font-weight: bold; color: #D84315;">254.400 hectáreas</span></p>
-
+          🎯 <span style="font-size:1.2em;
+                         font-weight:bold;
+                         color:#D84315;">
+            254 400 hectáreas
+          </span></p>
+        
           <p><strong>Avance estimado:</strong> 49,1%</p>
-          <div style="background-color: #ddd; border-radius: 20px; overflow: hidden; height: 20px; margin-top: 5px;">
-            <div style="width: 49.1%; background-color: #E53935; height: 100%; text-align: center; color: white; font-weight: bold;">
+          <div style="background-color:#ddd;
+                      border-radius:20px;
+                      overflow:hidden;
+                      height:20px;
+                      margin-top:5px;">
+            <div style="width:49.1%;
+                        background-color:#E53935;
+                        height:100%;
+                        text-align:center;
+                        color:white;
+                        font-weight:bold;">
               49.1%
             </div>
           </div>
         </div>
         """, unsafe_allow_html=True)
-
 
     else:
         st.info(f"🔨 En construcción para {TF}")
