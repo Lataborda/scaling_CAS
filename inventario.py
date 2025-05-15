@@ -336,6 +336,17 @@ elif view_option == "Capacidad de Modelos de extensión":
     # ==== CSS para tarjetas y paneles ====
     st.markdown("""
     <style>
+    /* …tus estilos actuales de .info-card… */
+    
+    /* FORZAR NÚMEROS EN NEGRO */
+    div.info-card h1,
+    div.info-card h2 {
+        color: #000000 !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+    <style>
     /* Estilos generales de tarjetas */
     div.info-card {
         background-color: #ffffff !important;
