@@ -334,25 +334,32 @@ elif view_option == "Capacidad de Modelos de extensión":
     st.header("Capacidad de Modelos de extensión")
 
     # ==== CSS para tarjetas y paneles ====
-    st.markdown("""
-    <style>
-      /* …tus reglas .info-card y .progress-bar… */
+    st.markdown(f"""
+    <div class="info-card">
+      <h2>🎯 31 200 ha</h2>
+      <p>Meta año 1: 20 000 productores × 1,56 ha</p>
+      <small>Base 100% = 13 000 ha</small>
     
-      /* NÚMEROS SIEMPRE EN NEGRO */
-      div.info-card h1,
-      div.info-card h2 {
-          color: #000000 !important;
-      }
-      /* CAFÉ: texto en tarjetas de panel-izquierdo y panel-derecho */
-      .panel-left .card p,
-      .panel-left .card p strong {
-          color: #000000 !important;
-      }
-      .panel-right .card p,
-      .panel-right .card p strong {
-          color: #FFFFFF !important;
-      }
-    </style>
+      <!-- Barra éxito: año 1 -->
+      <div class="progress-bar-container">
+        <div class="progress-bar progress-bar-success" style="width:26.6%;">26.6%</div>
+      </div>
+    
+      <!-- Barra éxito: proyección 4 años -->
+      <div class="progress-bar-container">
+        <div class="progress-bar progress-bar-success" style="width:124.8%;">124.8%</div>
+      </div>
+    
+      <!-- Barra advertencia: meta oficial -->
+      <div class="progress-bar-container">
+        <div class="progress-bar progress-bar-warning" style="width:254.4%;">254.4%</div>
+      </div>
+    
+      <!-- Barra peligro: avance actual -->
+      <div class="progress-bar-container">
+        <div class="progress-bar progress-bar-danger" style="width:49.1%;">49.1%</div>
+      </div>
+    </div>
     """, unsafe_allow_html=True)
     st.markdown("""
     <style>
